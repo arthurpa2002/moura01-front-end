@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        
+        <div class="div01" >
+
+            <p>Nome.</p>
+            <input type="name">
+
+            <br>
+
+            <p>Data de Nascimento:</p>
+            <input type="date">
+
+            <br>
+
+            <p>Inativo:</p>
+            <input class="Inativo" type="checkbox">
+
+            <br>
+
+            <p>Nacionalidade</p>
+            <select id="nacionalidade-select" class="selectN">
+                <option value="1">Brasileiro(a)</option>
+                <option value="2">Outros</option>
+                
+            </select>
+
+            <br>
+
+         <p id="rg-label">RG:</p>
+            <input type="number" id="rg-input">
+
+
+            <div>
+
+                <button onclick="adicionarPessoa()" >Adicionar pessoa</button>
+
+                <button onclick="limparFormulario()" >Limpar Formilário</button>
+
+            </div>
+
+            <br><br>
+
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Pesquisar...">
+                <button onclick="pesquisarPessoa()">Pesquisar</button>
+            </div>
+
+            <div id="pessoas-container"></div>
+
+            <div id="editar-pessoa-container" style="display: none;"></div>
+
+           
+
+        </div>
+
+
+
+
+
+        <script src="script.js"></script>
+
+
+        <script>
+             exibirPessoas();
+        </script>
+
+    </body>
+</html>
